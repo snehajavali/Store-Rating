@@ -1,0 +1,264 @@
+STORE RATING PLATFORM - SETUP GUIDE
+
+====================================================
+REQUIREMENTS
+============
+
+1. Node.js (v18 or later recommended)
+2. MySQL Server
+3. MySQL Workbench (Optional)
+4. VS Code
+
+====================================================
+PROJECT STRUCTURE
+=================
+
+store-rating-app/
+
+├── backend/
+├── frontend/
+├── store_rating_db.sql
+├── seed.js
+├── README.md
+
+====================================================
+DATABASE SETUP
+==============
+
+STEP 1: Open MySQL Workbench
+
+STEP 2: Create Database
+
+CREATE DATABASE store_rating_db;
+
+STEP 3: Configure Backend .env File
+
+Create .env inside backend folder:
+
+PORT=5000
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_mysql_password
+DB_NAME=store_rating_db
+
+JWT_SECRET=your_secret_key
+
+====================================================
+BACKEND SETUP
+=============
+
+Open Terminal:
+
+cd backend
+
+Install Dependencies:
+
+npm install
+
+If packages are missing install:
+
+npm install express
+npm install cors
+npm install dotenv
+npm install mysql2
+npm install sequelize
+npm install bcryptjs
+npm install jsonwebtoken
+npm install validator
+
+Development Dependencies:
+
+npm install -D nodemon
+
+====================================================
+FRONTEND SETUP
+==============
+
+Open Terminal:
+
+cd frontend
+
+Install Dependencies:
+
+npm install
+
+If packages are missing:
+
+npm install react-router-dom
+npm install axios
+
+Tailwind CSS:
+
+npm install tailwindcss @tailwindcss/vite
+
+====================================================
+SEED DATABASE
+=============
+
+The project includes a seed.js file.
+
+Run:
+
+cd backend
+
+node seed.js
+
+This will automatically create:
+
+✓ 1 Admin
+✓ 3 Store Owners
+✓ 10 Users
+✓ 8 Stores
+✓ Multiple Ratings
+
+====================================================
+DEFAULT LOGIN CREDENTIALS
+=========================
+
+ADMIN
+
+Email:
+[admin@storerating.com](mailto:admin@storerating.com)
+
+Password:
+Admin@123
+
+---
+
+STORE OWNER
+
+Email:
+[owner1@storerating.com](mailto:owner1@storerating.com)
+
+Password:
+Owner@123
+
+---
+
+NORMAL USER
+
+Email:
+[aisha@gmail.com](mailto:aisha@gmail.com)
+
+Password:
+User@123
+
+====================================================
+START BACKEND SERVER
+====================
+
+cd backend
+
+npm run dev
+
+Backend runs on:
+
+http://localhost:5000
+
+====================================================
+START FRONTEND SERVER
+=====================
+
+cd frontend
+
+npm run dev
+
+Frontend runs on:
+
+http://localhost:5173
+
+====================================================
+API TESTING
+===========
+
+Health Check:
+
+GET
+
+http://localhost:5000/
+
+Expected Response:
+
+Store Rating API Running
+
+====================================================
+FEATURES
+========
+
+ADMIN
+
+✓ Dashboard Statistics
+✓ Create Users
+✓ Create Stores
+✓ View Users
+✓ View Stores
+✓ Search Users
+✓ Search Stores
+✓ View User Details
+
+---
+
+NORMAL USER
+
+✓ Register
+✓ Login
+✓ Change Password
+✓ View Stores
+✓ Search Stores
+✓ Submit Rating
+✓ Modify Rating
+
+---
+
+STORE OWNER
+
+✓ Login
+✓ Change Password
+✓ View Ratings
+✓ View Average Store Rating
+
+====================================================
+IF NODE_MODULES IS MISSING
+==========================
+
+Backend:
+
+cd backend
+npm install
+
+Frontend:
+
+cd frontend
+npm install
+
+====================================================
+COMMON COMMANDS
+===============
+
+Install Dependencies:
+
+npm install
+
+Start Backend:
+
+npm run dev
+
+Start Frontend:
+
+npm run dev
+
+Seed Database:
+
+node seed.js
+
+====================================================
+PROJECT AUTHOR
+==============
+
+Sneha J
+
+
+====================================================
+END OF FILE
+===========
